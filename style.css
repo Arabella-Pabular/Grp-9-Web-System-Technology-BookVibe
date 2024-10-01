@@ -1,0 +1,202 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #4B0082;
+}
+
+header {
+  background: #301934;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+nav a.nav-link:hover {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.primary-btn {
+  background: #007bff;
+}
+
+.secondary-btn {
+  background: #6c757d;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Featured Books Section */
+.featured-books-section {
+  padding: 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.book-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Latest Reviews Section */
+.latest-reviews-section {
+  padding: 2rem;
+}
+
+.review-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.review-img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.review-content {
+  flex: 1;
+}
+
+.review-card h3 {
+  margin: 0;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.recommendation-card {
+  display: flex;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.recommendation-img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.recommendation-content {
+  flex: 1;
+}
+
+/* Community & About Sections */
+.community-section,
+.about-section {
+  padding: 2rem;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.community-section p,
+.about-section p {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* Footer Section */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer a.social-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+footer a.social-link:hover {
+  text-decoration: underline;
+}
