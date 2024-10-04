@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width" initial-scale=1.0>
     <title>Book Review Website</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
@@ -101,15 +102,16 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="main-footer">
-        <div class="main-footer-columns">
-            <div class="footer-about">
-                <h2>About Us</h2>
+    <footer>
+        <!-- Footer main -->
+        <section class="footer-main">
+            <div class="footer-main-item priority">
+                <h3>BookVibe</h3>
                 <p>BookVibe is an interactive platform for book enthusiasts to review, rate, and discuss their favorite reads. We provide personalized recommendations based on your reading preferences.</p>
             </div>
-            
-            <div class="footer-links">
-                <h3>Home</h3>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">Home</h2>
                 <ul>
                     <li><a href="#">Books</a></li>
                     <li><a href="#">Reviews</a></li>
@@ -117,40 +119,47 @@
                 </ul>
             </div>
 
-            <div class="footer-links">
-                <h3>Resources</h3>
+            <div class="footer-main-item">
+                <h2 class="footer-title">About</h2>
                 <ul>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Terms of Services</a></li>
+                    <li><a href="#">FAQs</a></li>
                     <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
                 </ul>
             </div>
 
-            <div class="footer-links">
-                <h3>Company</h3>
+            <div class="footer-main-item">
+                <h2 class="footer-title">Company</h2>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Help Center</a></li>
                 </ul>
             </div>
+        </section>
+      
+        <!-- Footer social -->
+        <section class="footer-social">
+          <div class="footer-social-list">
+            <a href="https://www.facebook.com/" class="footer-social-link">
+                <i class="ri-facebook-circle-line"></i>
+            </a>
+
+            <a href="https://www.instagram.com/" class="footer-social-link">
+                <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://x.com/" class="footer-social-link">
+                <i class="ri-twitter-x-line"></i>
+            </a>
         </div>
+        </section>
+      
+        <!-- Footer legal -->
+        <section class="footer-legal">
+            <p>&copy; 2024 BookVibe. All rights reserved.</p>
+        </section>
     </footer>
-
-    <!-- Footer Section -->
-    <div class="footer-social">
-        <div class="social-icons">
-            <div class="social-icon">f</div>
-            <div class="social-icon">i</div>
-            <div class="social-icon">X</div>
-            <div class="social-icon">tk</div>
-        </div>
-    </div>
-
-    <!-- Legal Footer Section -->
-    <div class="legal-footer">
-        <p>&copy; 2024 BookVibe. All rights reserved.</p>
-    </div>
 
     <script src="script.js">
         const menuIcon = document.getElementById('menu-icon');
