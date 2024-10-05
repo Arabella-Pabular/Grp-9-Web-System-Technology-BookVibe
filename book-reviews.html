@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Reviews - BookVibe</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js">
+    </script>
+    
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="#" class="logo">BookVibe</a>
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="book-reviews.html">Book Reviews</a></li>
+            <li><a href="recommendations.html">Recommendations</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </header>
+
+    <!-- Book Reviews Section -->
+    <section class="book-reviews">
+        <div class="container">
+            
+            <!-- Header Section -->
+            <div class="reviews-header">
+                <h1>Book Reviews</h1>
+                <p>Explore the best books, read reviews, and find recommendations from other book lovers.</p>
+                
+            </div>
+
+            <!-- Search Box Section -->
+          <div class = "search-container">  
+          <div class="search-box">
+              <input type="text" placeholder="Search for books..." />
+               <a href="search">
+                   <i class="fas fa-search"></i>
+               </a>
+          </div>
+          </div>
+            
+            <!-- Sorting Options -->
+            <div class="sorting-options">
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="all">All</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="science-fiction">Science Fiction</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="biography">Biography</option>
+                    <option value="action&adventure">Action & Adventure</option>
+                    <option value="history">History</option>
+                </select>
+
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+
+                <label for="date">Sort by:</label>
+                <select id="date">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                    <option value="rating">Highest Rating</option>
+                </select>
+            </div>
+
+            <!-- Book List Section -->
+            <div class="book-list">
+                <!-- Book Item 1 -->
+                <div class="book-item">
+                    <img src="Book Covers/the-great-gatsby.jpg" alt="Book 1">
+                    <h2>The Great Gatsby</h2>
+                    <p>by F. Scott Fitzgerald</p>
+                    <p>Rating: 4.5/5 (120 Reviews)</p>
+                    <a href="book1-details.html" class="review-btn">Read Reviews</a>
+
+                    <!-- Review Submission Form for Book 1 -->
+                    <div class="review-form">
+                        <h3>Submit Your Review</h3>
+                        <form action="#" method="POST">
+                            <label for="rating-book1">Rating:</label>
+                            <select id="rating-book1" name="rating" required>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+
+                            <label for="review-book1">Your Review:</label>
+                            <textarea id="review-book1" name="review" rows="5" placeholder="Write your review here..."
+                                required></textarea>
+
+                            <button type="submit" class="btn primary-btn">Submit Review</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Book Item 2 -->
+                <div class="book-item">
+                    <img src="Book Covers/1984.jpg" alt="Book 2">
+                    <h2>1984</h2>
+                    <p>by George Orwell</p>
+                    <p>Rating: 4.8/5 (200 Reviews)</p>
+                    <a href="book2-details.html" class="review-btn">Read Reviews</a>
+
+                    <!-- Review Submission Form for Book 2 -->
+                    <div class="review-form">
+                        <h3>Submit Your Review</h3>
+                        <form action="#" method="POST">
+                            <label for="rating-book2">Rating:</label>
+                            <select id="rating-book2" name="rating" required>
+                                <option value="5">5 Stars</option>
+                                <option value="4">4 Stars</option>
+                                <option value="3">3 Stars</option>
+                                <option value="2">2 Stars</option>
+                                <option value="1">1 Star</option>
+                            </select>
+
+                            <label for="review-book2">Your Review:</label>
+                            <textarea id="review-book2" name="review" rows="5" placeholder="Write your review here..."
+                                required></textarea>
+
+                            <button type="submit" class="btn primary-btn">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Additional book items can go here -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 BookVibe. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+</body>
+
+</html>
