@@ -658,6 +658,7 @@ font-size: 25px;
 }
 
 /* Footer Section */
+<<<<<<< HEAD
 footer {
   background: #555;
   color: #fff;
@@ -696,44 +697,115 @@ footer {
 
 .footer-links ul {
   list-style: none;
+=======
+* {
+  font-family: “Poppins”, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
   padding: 0;
 }
 
-.footer-links ul li {
-  margin-bottom: 8px;
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  background-color: #555;
+  color: #bbb;
+  line-height: 1.5;
+}
+
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Sticks footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+/* Footer main */
+.footer-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-title {
+  color: #fff;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+
+.footer-main-item {
+  flex-basis: 20%;
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+
+.footer-main-item.priority {
+  flex-basis: 30%;
+}
+
+.footer-main-item.priority h3 {
+  color: #fff;
+  text-align: left;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+
+.footer-main-item.priority p {
+  text-align: justify;
+  line-height: 2;
+  margin: 0;
+}
+
+/* Footer social */
+.footer-social {
+  padding: 0 1.875rem 1.25rem;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
 }
 
 /* Remove link interactivity */
-.footer-column li a {
+.footer-social-list a {
   pointer-events: none;
   cursor: default;
   color: inherit;
   text-decoration: none;
 }
 
-.footer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  margin-bottom: 40px;
-}
-
-.btn-signup {
-  background-color: #512e63;
+.footer-social-link {
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  border: none;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
-.btn-signup:hover {
-  background-color: #4B0082;
+.footer-social-link:hover {
+  color: #4B0082;
 }
 
+<<<<<<< HEAD
 .btn-login {
   background-color: transparent;
   color: #fff;
@@ -784,10 +856,18 @@ footer {
   background-color: #333;
   padding: 20px 60px;
   text-align: left;
+=======
+/* Footer legal */
+.footer-legal {
+  padding: 0.9375rem 1.875rem;
+  background-color: #333;
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 }
 
 .legal-footer p {
+  color: #fff;
   font-size: 0.9rem;
+<<<<<<< HEAD
   color: #fff;
 }
 
@@ -809,6 +889,11 @@ footer {
 
 
 
+=======
+  text-align: left;
+}
+
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 
 /* Book Reviews Section */
 .book-reviews {
@@ -1214,25 +1299,49 @@ section h4 {
 }
 
 
+<<<<<<< HEAD
 /*=========== About Section ===========*/
 
 .about, .mission, .team {
     margin-top: 80px;                  
     padding: 50px 60px;
+=======
+/* About Section */
+.about, .mission, .Started, .Together, .team {
+    padding: 50px 0;
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
     text-align: center;
 
 }
 
 .about h1 {
+<<<<<<< HEAD
     color: white; 
     font-size: 36px;
     margin-bottom: 20px;
+=======
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: white; 
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 }
 
-.mission h2, .team h2 {
+.about p {
+  color: white;
+}
+
+.mission h2, .Started h2, .Together h2, .team h2 {
     font-size: 28px;
     margin-bottom: 15px;
 }
+
+.mission p, .Started p, .Together p {
+  color: white;
+}
+
+
+
 
 /* Team Section */
 .team-member {
@@ -1250,12 +1359,18 @@ section h4 {
 
 .team-member h3 {
     font-size: 22px;
+    color: white;
     margin-bottom: 5px;
 }
 
 .team-member p {
+<<<<<<< HEAD
     color: #f1f2f9;
     font-size: 18px;
+=======
+    color: #949090;
+    font-size: 16px;
+>>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 }
 
   .about, .mission p{
