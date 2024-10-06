@@ -658,7 +658,7 @@ font-size: 25px;
 }
 
 /* Footer Section */
-<<<<<<< HEAD
+
 footer {
   background: #555;
   color: #fff;
@@ -697,12 +697,11 @@ footer {
 
 .footer-links ul {
   list-style: none;
-=======
+
 * {
   font-family: “Poppins”, sans-serif;
   box-sizing: border-box;
   margin: 0;
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
   padding: 0;
 }
 
@@ -805,7 +804,7 @@ body {
   color: #4B0082;
 }
 
-<<<<<<< HEAD
+
 .btn-login {
   background-color: transparent;
   color: #fff;
@@ -856,12 +855,12 @@ body {
   background-color: #333;
   padding: 20px 60px;
   text-align: left;
-=======
+
 /* Footer legal */
 .footer-legal {
   padding: 0.9375rem 1.875rem;
   background-color: #333;
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
+
 }
 
 .legal-footer p {
@@ -889,11 +888,7 @@ body {
 
 
 
-=======
-  text-align: left;
-}
 
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 
 /* Book Reviews Section */
 .book-reviews {
@@ -1299,32 +1294,19 @@ section h4 {
 }
 
 
-<<<<<<< HEAD
-/*=========== About Section ===========*/
 
-.about, .mission, .team {
-    margin-top: 80px;                  
-    padding: 50px 60px;
-=======
 /* About Section */
 .about, .mission, .Started, .Together, .team {
     padding: 50px 0;
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
     text-align: center;
 
 }
 
 .about h1 {
-<<<<<<< HEAD
-    color: white; 
-    font-size: 36px;
-    margin-bottom: 20px;
-=======
   font-size: 36px;
   margin-bottom: 20px;
   margin-top: 30px;
   color: white; 
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 }
 
 .about p {
@@ -1364,13 +1346,8 @@ section h4 {
 }
 
 .team-member p {
-<<<<<<< HEAD
-    color: #f1f2f9;
-    font-size: 18px;
-=======
     color: #949090;
     font-size: 16px;
->>>>>>> 176ce5ca3fa5a80aa82c0db47ffae855a4a60f1a
 }
 
   .about, .mission p{
