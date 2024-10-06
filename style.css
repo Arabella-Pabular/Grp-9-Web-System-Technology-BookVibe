@@ -1,3 +1,9 @@
+ /*================ GOOGLE FONTS ======================*/  
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+
+
+ /*================ BASE ======================*/ 
+
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +15,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  color: #333;
+  color: #faf4f4;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #4B0082;
+  background: linear-gradient(135deg,  #4B0082, #301934, #4B0082);
 }
 
 h2 {
@@ -24,7 +30,10 @@ h2 {
 }
 
 
-header {
+
+/*================== HEADER & NAV =======================*/
+
+.header {
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
   padding: 20px 9%;
@@ -43,19 +52,31 @@ header {
   color: #c889e6;
   font-style: italic;
   z-index: 1002;
-
-
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-right: auto;
 }
 
-
-.navlist {
-  list-style-type: none;
+.nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+ .navlist {
+  list-style-type: none;
+  display: flex;
   margin: 0;
   padding: 0;
   gap: 30px;
 
+}
+
+.navmenu {
+  display: flex; /* Make navmenu a flex container */
+  justify-content: flex-end; /* Align navlist to the right */
 }
 
 .navlist li {
@@ -77,6 +98,8 @@ header {
   padding: 5px 10px;
 }
 
+
+
 #menu-icon {
   display: none;
   /* Hide by default, shown only on smaller screens */
@@ -84,11 +107,25 @@ header {
   color: white;
   cursor: pointer;
   z-index: 10001;
+  
 }
 
 
 /* Responsive Design for smaller screens */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .navmenu {
+    flex-direction: column;  /* Stack the menu items vertically */
+    position: absolute;  /* Position it to overlay the content */
+    top: 60px;  /* Adjust based on your navbar height */
+    right: 0;
+    background-color: #333;  /* Give it a background for better visibility */
+    width: 100%;  /* Full width */
+    height: 100vh;  /* Full height */
+    display: none;  /* Hide the menu by default */
+    justify-content: flex-start; /* Align items to the top */
+    z-index: 10000;
+  }
+  
   .navlist {
     display: none;
     /* Hide navlist in mobile view */
@@ -103,6 +140,7 @@ header {
     padding: 20px;
   }
 
+
   .navlist li {
     margin: 10px 0;
     /* Space out items in mobile view */
@@ -110,9 +148,15 @@ header {
     /* Center items in mobile view */
   }
 
+
   #menu-icon {
     display: block;
     /* Show menu icon in mobile view */
+    font-size: 35px;
+  color: white;
+  cursor: pointer;
+  z-index: 9999; 
+  position: relative; /* Position it properly relative to the container */
   }
 
   .navlist.show {
@@ -123,7 +167,6 @@ header {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #301934, #4B0082, #9988aa);
   color: #fff;
   padding: 7rem 1.5rem;
   position: relative;
@@ -131,7 +174,7 @@ header {
   min-height: 90vh;
   display: flex;
   justify-content: space-between;
-  /* Align content to space between left and right */
+  min-height: 100vh;
 
 }
 
@@ -141,12 +184,12 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-
   z-index: 1;
 }
 
 
 .hero-content {
+  align-content: center;
   position: relative;
   max-width: 50%;
   margin: 0 auto;
@@ -170,6 +213,7 @@ header {
 .hero-image {
   max-width: 45%;
   /* Make the image take up 45% of the section's width */
+  align-content: center;
   position: relative;
   z-index: 2;
   animation: float 3s ease-in-out infinite;
@@ -182,7 +226,7 @@ header {
 }
 
 section {
-  padding: 0 19%
+  padding: 0 19%;
 }
 
 .hero-section h1 {
@@ -211,6 +255,200 @@ section {
   opacity: 0.9;
 }
 
+
+
+/* ======== For featured-books-section ======== */
+.featured-books-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  animation: slideIn 2s ease-out;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.featured-books-section p {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(195, 199, 221);
+  font-size: 17px;
+  line-height: 2;
+  margin-left: 0; /* Removed left margin for better alignment */
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease-out;
+  text-align: justify;
+  max-width: 50%;
+  margin:auto;
+}
+
+.highlighted-text {
+  font-family: 'Roboto', san-serif; /* Change to your desired font */
+  font-size: 21px; /* Adjust the font size as needed */
+  text-align: center;
+  font-style:italic;
+  display: block;
+  color: rgb(255, 255, 255); /* Optional: Change the color as needed */
+}
+
+
+/* View More Button Styles */
+.view-more {
+  display: inline-block; /* Make it an inline-block element for padding and margin */
+  padding: 10px 20px; /* Add padding for a better look */
+  font-size: 18px; /* Font size for the text */
+  font-family: 'Roboto', sans-serif; /* Consistent font family */
+  color: white; /* Text color */
+  background-color: #825aa7; /* Button background color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+}
+
+/* Hover Effect for View More Button */
+.view-more:hover {
+  background-color: #743cce; /* Darker background on hover */
+  transform: scale(1.05); /* Slight scale effect on hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+
+.book-description {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+
+/* Featured Books Section */
+.featured-books-section {
+  padding: 2rem;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  min-height: 100vh;
+  text-align: right;
+}
+
+.carousel-container {
+  display: flex; /* Flexbox layout */
+  justify-content: flex-start; /* Space between carousel and description */
+  width: 100%; /* Full width */
+}
+
+.book-carousel {
+  display: flex; 
+  overflow: hidden; /* Hide overflow to only show one book */
+  width: 60%; /* Occupy half of the section */
+  justify-content: center;
+  padding-right: 1rem; /* Add some space to the right */
+}
+
+.book-feature {
+  min-width: 800px; /* Minimum width for book feature */
+  max-width: 800px; /* Maximum width for book feature */
+  transition: scale 0.4s ease;
+  margin-right: -100px;
+  margin-left: -100px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.book-img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain;
+  transition: scale 0.4s ease, transform 0.4s ease; /* Transition for hover effects */
+ 
+}
+
+.book-feature:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+/* Swiper class */
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+  transform: scale(1);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) { /* Adjusts for devices with a max width of 768px */
+  .carousel-container {
+      flex-direction: column; /* Stack carousel and description vertically */
+      align-items: center; /* Center items horizontally */
+  }
+
+  .book-carousel {
+      width: 100%; /* Full width on mobile */
+  }
+
+  .description {
+    width: 90%; /* Reduce width on smaller devices */
+    padding: 1rem; /* Less padding on mobile */
+  }
+
+  .book-feature {
+      min-width: 300px; /* Minimum width for each book item */
+      max-width: 300px;
+      margin-right: -30px; /* Adjust margins for smaller screens */
+      margin-left: -30px;
+      flex: 0 0 auto; /* Prevent shrinking */
+  }
+
+  .featured-books-section h3 {
+    margin-top: 2rem;  
+    font-size: 30px; /* Adjust heading size for mobile */
+      text-align: center;
+  }
+
+  .featured-books-section p {
+      text-align: center; /* Center paragraph on mobile */
+  }
+}
+
+.book-carousel::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit browsers */
+}
+
+
+  
+  /* For latest-reviews-section */
+  .latest-reviews-section h3 {
+      font-family: 'Roboto', sans-serif;
+      color: black;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+  }
+
+
+  .latest-reviews-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  }
+
+  .latest-reviews-section p {
+      font-family: 'Roboto', sans-serif;
+      color: black;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+  }
+
+  
 .btn {
   font-family: 'Poppins', Arial, sans-serif;
   display: inline-block;
@@ -227,7 +465,7 @@ section {
 
 
 .primary-btn {
-  background: #007bff;
+  background: #825aa7;
 }
 
 .secondary-btn {
@@ -283,74 +521,100 @@ section {
   }
 }
 
-/* Featured Books Section */
-.featured-books-section {
-  padding: 2rem;
-  background: #2c0770;
-  text-align: center;
-}
-
-.book-carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 5rem;
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1rem;
-  text-align: center;
-  width: 200px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carousel-item:hover {
-  transform: translateY(-10px);
-  /* Makes the item "float" upwards */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
-  /* Adds a shadow for the floating effect */
-}
 
 
-.carousel-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 5px;
-}
+  
 
-/* Latest Reviews Section */
+/* ==========  Latest Reviews Section =========*/
 .latest-reviews-section {
   padding: 2rem;
+  
+}
+
+.latest-reviews-section h2 {
+  text-align: center; /* Center the section title */
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  font-size: 45px;
+  font-style: normal;
+  font-family: 'Reboto', sans-serif;
+  color: rgb(211, 199, 243);
+}
+
+.review-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 .review-card {
+  background: #471c70;
+  border: 2px;
+  border-radius: 9px;
+  margin: 6rem;
+  padding: 2rem;
   display: flex;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  padding: 1rem;
+    width:  700px;
+    height: auto;
+    box-shadow: 0 12px 24px rgba(7, 7, 7, 0.705); 
+    align-items: flex-end;
+    transition: all 0.3s ease; 
 }
 
 .review-img {
-  width: 150px;
-  height: 200px;
+  width: 50%;
+  height: auto;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 2px;
   margin-right: 1rem;
 }
 
 .review-content {
-  flex: 1;
+  align-self: center;
+    background: white;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgb(170, 197, 218, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.review-content p:nth-of-type(1) {
+  margin-top: 2rem; 
+  margin-bottom: 0.5rem; 
+}
+
+
+.review-content p:nth-of-type(3) {
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  font-size: 15px;
+  color:#6c757d;
+}
+
+.review-content p:nth-of-type(2) {
+color: yellow;
+font-size: 25px;
+}
+
+.review-content h3 {
+  margin-top: 1rem;
+  font-family: 'Roboto', san-serif;
 }
 
 .review-card h3 {
   margin: 0;
 }
+
+.review-card:hover {
+  box-shadow: 0 12px 24px rgba(8, 0, 0, 0.938); 
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
 
 /* Recommendations Section */
 .recommendations-section {
@@ -360,7 +624,7 @@ section {
 
 .recommendation-card {
   display: flex;
-  background: #fff;
+  background: #cedcfa;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -395,7 +659,7 @@ section {
 
 /* Footer Section */
 footer {
-  background: #2c3e50;
+  background: #555;
   color: #fff;
   padding: 40px 60px;
   display: flex;
@@ -405,7 +669,7 @@ footer {
 }
 
 .main-footer {
-  background-color: #2c3e50;
+  background-color: #333;
   padding: 40px 60px;
 }
 
@@ -427,7 +691,7 @@ footer {
 
 .footer-about p, .footer-links ul li a {
   font-size: 1rem;
-  color: #333;
+  color: #fff;
 }
 
 .footer-links ul {
@@ -487,7 +751,7 @@ footer {
 
 /* Social Footer */
 .footer-social {
-  background-color: #eaeaea;
+  background-color: #555;
   padding: 20px 0;
   text-align: center;
 }
@@ -517,33 +781,29 @@ footer {
 
 /* Legal Footer */
 .legal-footer {
-  background-color: #2c3e50;
+  background-color: #333;
   padding: 20px 60px;
   text-align: left;
 }
 
 .legal-footer p {
   font-size: 0.9rem;
-  color: #333;
+  color: #fff;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .footer {
+  .main-footer-columns {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
   }
 
-  .footer-about,
-  .footer-links,
-  .footer-social,
-  .footer-social {
+  .footer-about, .footer-links {
     margin-bottom: 20px;
   }
 
-  .social-icon-container {
-    justify-content: center;
+  .legal-footer {
+    text-align: center;
   }
 }
 
@@ -553,7 +813,7 @@ footer {
 /* Book Reviews Section */
 .book-reviews {
   padding: 80px 5%;
-  background-color: #fff;
+  
   margin-top: 80px;
 }
 
@@ -571,7 +831,7 @@ footer {
   background: #fff;
   border-radius: 30px;
   align-items: center;
-  box-shadow: 0 10px 25px rgb(82, 42, 141, 0.3);
+  box-shadow: 0 10px 25px rgb(255, 255, 255, 0.3);
   max-width: fit-content; 
 }
 
@@ -605,13 +865,14 @@ footer {
 
 .book-reviews .reviews-header h1 {
   font-size: 2.5rem;
-  color: #4B0082;
+  color: #f0f0f0;
 }
 
 .book-reviews .reviews-header p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 1rem 0;
-  color: #333;
+  color: #bfabab;
+  font-family: 'Roboto', sans-serif;
 }
 
 .book-reviews .reviews-header #search-bar {
@@ -635,16 +896,17 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem; /* Adds space between each sorting option */
-  margin-bottom: 2rem;
-  margin-top: 3rem;
+  gap: 4rem; /* Adds space between each sorting option */
+  margin-bottom: 3rem;
+  margin-top: 7rem;
   font-family: 'Roboto', sans-serif;
 }
 
 /* Label and Select Styling */
 .sorting-options label {
   font-size: 1.1rem;
-  color: #520d73;
+  color: #e0d9e3;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   display: inline-flex;
   align-items: center;
@@ -656,10 +918,10 @@ padding: 0.7rem;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: #e5d1ff;
   color: #333;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(82, 42, 141, 0.1);
+  box-shadow: 0 4px 10px rgb(169, 162, 179, 0.1);
 }
 
 /* Hover and Focus Effects */
@@ -708,6 +970,8 @@ padding: 0.7rem;
   border-radius: 5px;
 }
 
+
+  
 .book-reviews .book-item h2 {
   font-size: 24px;
   color: #2c3e50;
@@ -789,9 +1053,8 @@ footer {
 }
 
 
-/* Recommendations Section */
+/* ============  Recommendations Section ==============*/
 .recommendations {
-    background: linear-gradient(135deg, #2e004f, #520d73); /* Dark purple gradient */
     padding: 3rem 2rem;
     text-align: center;
     color: white;
@@ -829,6 +1092,12 @@ footer {
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
+   
+}
+
+.recommendation-list .book{
+box-shadow: 0 12px 24px rgba(7, 7, 7, 0.705); 
+
 }
 
 /* Section Headers */
@@ -867,21 +1136,21 @@ section h4 {
 
 /* Personalized Recommendations Section */
 .personalized {
-    background-color: #4e1575;
+  
     padding: 40px 0;
     margin-bottom: 40px;
 }
 
 /* "You Might Also Like" Section */
 .might-like {
-    background-color: #391556;
+   
     padding: 40px 0;
     margin-bottom: 40px;
 }
 
 /* Community Picks Section */
 .community-picks {
-    background-color: #2e164b;
+    
     padding: 40px 0;
     margin-bottom: 40px;
 }
@@ -945,13 +1214,17 @@ section h4 {
 }
 
 
-/* About Section */
+/*=========== About Section ===========*/
+
 .about, .mission, .team {
-    padding: 50px 0;
+    margin-top: 80px;                  
+    padding: 50px 60px;
     text-align: center;
+
 }
 
 .about h1 {
+    color: white; 
     font-size: 36px;
     margin-bottom: 20px;
 }
@@ -981,14 +1254,42 @@ section h4 {
 }
 
 .team-member p {
-    color: #555;
-    font-size: 16px;
+    color: #f1f2f9;
+    font-size: 18px;
 }
 
-/* Footer Section */
-footer {
-    background-color: #333;
+  .about, .mission p{
     color: white;
+  }
+
+
+  /*=========== LOGIN PAGE ===========*/
+
+  .login-page{
+    height: 100vh;
+  }
+
+  .login-content h1{
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-weight: bold;
+    
+  }
+
+  .login-content p{
+     margin-top: 2rem;    
+     text-align: left;
+  }
+
+  .login-box{
+    background: rgba(51, 11, 75, 0.603);
+    border: 1px;
+    overflow: hidden;
+    padding: 5rem;
+    border-radius: 10px;
+    width: 500px;
+    height: 600px;
+    box-shadow: 0px 12px 24px rgb(0, 6, 10);
+    transition: transform 0.3s ease-in-out;
     text-align: center;
-    padding: 1rem 0;
-}
+  }

@@ -5,8 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Reviews - BookVibe</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!--================ CSS ======================-->  
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <!--================ FAVICON ======================-->  
+     <link rel="shortcut icon" href="Images/logo.png" type="image/png">
+
+
+    <!--================ REMIXICONS ======================-->  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="9afza5vpuemopj82ffu65gt9sh9v8h9s">
+
+     <!--================ SWIPER CSS ======================-->  
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js">
     </script>
     
@@ -15,16 +28,56 @@
 <body>
 
     <!-- Header Section -->
-    <header>
-        <a href="#" class="logo">BookVibe</a>
+    <header class="header" id="header">
+       <nav class = "nav container">
+        <a href="#" class="logo">
+
+            <img src="Images/logo.png" alt="BookVibe Logo" style="width: 40px; height: 60px; vertical-align: middle;"> BookVibe</a>
+
+      <div class = "navmenu">
         <ul class="navlist">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="book-reviews.html">Book Reviews</a></li>
-            <li><a href="recommendations.html">Recommendations</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#login">Login</a></li>
+            <li class= "nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="ri-home-3-line"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="book-reviews.html" class="nav-link">
+                    <i class="ri-shield-star-line"></i>
+                    <span>Book Reviews</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="recommendations.html" class="nav-link">
+                    <i class="ri-book-3-line"></i>
+                    <span>Recommendations</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="about.html" class="nav-link">
+                    <i class="ri-team-line"></i>
+                    <span>About</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="login.html" class="nav-link">
+                    <i class="ri-login-box-line"></i>
+                    <span>Login</span>
+                </a>
+            </li>   
         </ul>
+      </div>
+
+
+      <div class="bx bx-menu" id="menu-icon"> &#9776;</div>
+
+    </nav>
+
     </header>
 
     <!-- Book Reviews Section -->
