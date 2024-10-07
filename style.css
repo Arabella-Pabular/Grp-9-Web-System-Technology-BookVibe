@@ -412,6 +412,56 @@ section {
   .featured-books-section p {
       text-align: center; /* Center paragraph on mobile */
   }
+
+    /* Adjust review-container for smaller screens */
+    .review-container {
+      display: flex;
+      flex-direction: column; /* Stack reviews vertically on smaller screens */
+      align-items: center; /* Center review cards */
+    }
+  
+    /* Adjust review-card for mobile */
+    .review-card {
+      width: 100%; /* Full width within its container */
+      max-width: 350px; /* Restrict max width on mobile */
+      margin-bottom: 1.5rem; /* Space between cards */
+      padding: 1rem 0; /* Adjust padding */
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+    }
+  /* Adjust review-card image */
+.review-card img {
+  height: 180px; /* Set a fixed height */
+  object-fit: cover; /* Prevent image from stretching */
+  border-radius: 5px;
+}
+
+/* Limit the text height and overflow */
+.review-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-content p {
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+  max-height: 4.5rem; /* Control the height of content */
+}
+
+/* Limit description and prevent overflowing */
+.review-content .description {
+  overflow: hidden;
+  white-space: nowrap; /* Prevent wrapping */
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+  
+
 }
 
 .book-carousel::-webkit-scrollbar {
@@ -657,46 +707,9 @@ font-size: 25px;
   margin: auto;
 }
 
+
 /* Footer Section */
 
-footer {
-  background: #555;
-  color: #fff;
-  padding: 40px 60px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  border-top: 1px solid #ccc;
-}
-
-.main-footer {
-  background-color: #333;
-  padding: 40px 60px;
-}
-
-.footer-about {
-  flex: 1;
-  min-width: 300px;
-}
-
-.footer-links {
-  flex: 1;
-  min-width: 200px;
-  margin-left: 20px;
-}
-
-.footer-about h2, .footer-links h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.footer-about p, .footer-links ul li a {
-  font-size: 1rem;
-  color: #fff;
-}
-
-.footer-links ul {
-  list-style: none;
 
 * {
   font-family: “Poppins”, sans-serif;
@@ -711,8 +724,11 @@ ul {
 }
 
 footer {
-  background-color: #555;
-  color: #bbb;
+  background-color: #412c4e;
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  margin-top: 30px;
   line-height: 1.5;
 }
 
@@ -732,9 +748,6 @@ body {
   flex-direction: column;
 }
 
-.container {
-  flex: 1;
-}
 
 /* Footer main */
 .footer-main {
@@ -750,10 +763,17 @@ body {
   padding-bottom: 0.625rem;
 }
 
+.footer-main-item h3,
 .footer-main-item {
   flex-basis: 20%;
   padding: 1.25rem;
   min-width: 12.5rem;
+}
+
+.footer-main-item {
+  flex-basis: 20%;
+  padding: 1.25rem;
+  min-width: 12.5rem; 
 }
 
 .footer-main-item.priority {
@@ -782,14 +802,13 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
-  border-top: 1px #777 solid;
   padding-top: 1.25rem;
 }
 
-/* Remove link interactivity */
+
 .footer-social-list a {
-  pointer-events: none;
-  cursor: default;
+  pointer-events: auto;
+  cursor:pointer;
   color: inherit;
   text-decoration: none;
 }
@@ -797,64 +816,20 @@ body {
 .footer-social-link {
   color: #fff;
   font-size: 1.5rem;
-  transition: color 0.3s;
+  transition: color 0.3s,  text-shadow 0.3s;
 }
 
 .footer-social-link:hover {
-  color: #4B0082;
-}
-
-
-.btn-login {
-  background-color: transparent;
-  color: #fff;
-  border: 1px solid #512e63;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.btn-login:hover {
-  background-color: #4B0082;
-  color: #fff;
+  color: #6ab5f1; /* Change the color on hover */
+  text-shadow: 0 0 8px #62b3d8, 0 0 15px #8a91f1, 0 0 20px #c7e9ff;
 }
 
 /* Social Footer */
 .footer-social {
-  background-color: #555;
   padding: 20px 0;
   text-align: center;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.social-icon {
-  width: 40px;
-  height: 40px;
-  background-color: #ddd;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  color: #fff;
-  transition: background-color 0.3s;
-}
-
-.social-icon:hover {
-  background-color: #aaa;
-}
-
-/* Legal Footer */
-.legal-footer {
-  background-color: #333;
-  padding: 20px 60px;
-  text-align: left;
 
 /* Footer legal */
 .footer-legal {
@@ -863,12 +838,6 @@ body {
 
 }
 
-.legal-footer p {
-  color: #fff;
-  font-size: 0.9rem;
-<<<<<<< HEAD
-  color: #fff;
-}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -1123,14 +1092,7 @@ padding: 0.7rem;
   background-color: #3498db;
 }
 
-/* Footer Section */
-footer {
-  background-color: #2c3e50;
-  text-align: center;
-  padding: 15px 0;
-  color: #fff;
-  margin-top: 30px;
-}
+
 
 
 /* ============  Recommendations Section ==============*/
@@ -1385,3 +1347,4 @@ section h4 {
     transition: transform 0.3s ease-in-out;
     text-align: center;
   }
+
