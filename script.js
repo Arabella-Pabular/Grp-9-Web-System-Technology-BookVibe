@@ -38,3 +38,28 @@ document.addEventListener('click', function(event) {
     navList.classList.remove('show');  // Close menu if clicked outside
   }
 });
+
+// LOGIN OVERLAY
+const loginModal = document.getElementById('login'),
+      loginButton = document.getElementById('login-button'),
+      loginClose = document.querySelector(".close")
+
+if(loginButton) {
+  loginButton.addEventListener('click', () =>{
+    loginModal.classList.add('show-login')
+  })
+}
+
+// When the user clicks on <span> (x), close the modal
+if(loginClose) {
+  loginClose.addEventListener('click', () =>{
+    loginModal.classList.remove('show-login')
+  })
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == loginModal) {
+    loginModal.classList.remove('show-login');
+  }
+}
