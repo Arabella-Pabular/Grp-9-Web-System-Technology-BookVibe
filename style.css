@@ -1453,35 +1453,132 @@ section h4 {
     color: white;
   }
 
+/* Login Overlay */
+/* The Modal (background) */
+.login {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(16px);
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: top .4s;
+}
 
-  /*=========== LOGIN PAGE ===========*/
+/* Login Content */
+.login-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px; /* Fixed width for desktop */
+  text-align: center;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
 
-  .login-page{
-    height: 100vh;
-  }
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
 
-  .login-content h1{
-    font-family: 'Roboto';
-    font-size: 18px;
-    font-weight: bold;
-    
-  }
+.close:hover {
+  color: black;
+}
 
-  .login-content p{
-     margin-top: 2rem;    
-     text-align: left;
-  }
+h2 {
+  color: black;
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
 
-  .login-box{
-    background: rgba(51, 11, 75, 0.603);
-    border: 1px;
-    overflow: hidden;
-    padding: 5rem;
-    border-radius: 10px;
-    width: 500px;
-    height: 600px;
-    box-shadow: 0px 12px 24px rgb(0, 6, 10);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-  }
+/* Input fields */
+input[type="email"], input[type="password"] {
+  width: 90%;
+  padding: 15px;
+  margin: 10px 0;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
 
+/* Login button */
+.login-button {
+  background-color: #520d73; /* Prominent red color */
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #3f0858;
+}
+
+/* Social login buttons */
+.social-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.facebook-button {
+  background-color: #3b5998;
+  color: white;
+  border-radius: 20px;
+}
+
+.google-button {
+  background-color: #fff;
+  color: grey;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 15px 0;
+}
+
+.or {
+  font-size: 15px;
+  color: #000000;
+  font-weight: 700;
+  margin: 10px 0px;
+}
+
+.show-login {
+  top: 0;
+}

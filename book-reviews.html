@@ -67,7 +67,7 @@
             </li>
 
             <li class= "nav-item">
-                <a href="login.html" class="nav-link">
+                <a href="#" id="login-button">
                     <i class="ri-login-box-line"></i>
                     <span>Login</span>
                 </a>
@@ -225,6 +225,33 @@
         </div>
     </section>
 
+    <!-- Login Overlay -->
+    <div id="login" class="login grid">
+        <div class="login-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            
+            <!-- Login Form -->
+            <form>
+                <input type="email" id="email" name="email" placeholder="Write your email" required>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <a href="#">Forgotten your password?</a>
+                
+                <button type="submit" class="login-button">Log In</button>
+                
+                <p class="or">Or</p>
+                
+                <!-- Social login buttons -->
+                <button class="social-button facebook-button">Continue with Facebook</button>
+                <button class="social-button google-button">Continue with Google</button>
+                
+                <p>By continuing, you agree to BookVibe's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+                
+                <p>Not a member yet? <a href="#">Sign-up</a></p>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer Section -->
     <footer>
