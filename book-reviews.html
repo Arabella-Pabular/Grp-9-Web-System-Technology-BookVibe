@@ -13,10 +13,12 @@
 
     <!--================ FAVICON ======================-->  
      <link rel="shortcut icon" href="Images/logo.png" type="image/png">
-
-
+      
     <!--================ REMIXICONS ======================-->  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="9afza5vpuemopj82ffu65gt9sh9v8h9s">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
 
      <!--================ SWIPER CSS ======================-->  
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
@@ -136,80 +138,99 @@
                     <option value="rating">Highest Rating</option>
                 </select>
             </div>
+        </section>  
 
             <!-- Book List Section -->
+           <section class="review-area"  
             <div class="book-list">
                 <!-- Book Item 1 -->
                 <div class="book-item">
-                    <img src="Book Covers/the-great-gatsby.jpg" alt="Book 1">
+                    <img src="Book Covers/the-great-gatsby.jpg">
+                    <div class="content-wrapper">
+                    <div class ="book-details">
                     <h2>The Great Gatsby</h2>
                     <p>by F. Scott Fitzgerald</p>
-                    <p>Rating: 4.5/5 (120 Reviews)</p>
+                    <p class="rating">Rating: <span> 4.5/5 </span> (120 Reviews)</p>
                     <a href="book1-details.html" class="review-btn">Read Reviews</a>
+                    </div>
 
                     <!-- Review Submission Form for Book 1 -->
                     <div class="review-form">
                         <h3>Submit Your Review</h3>
-                        <form action="#" method="POST">
-                            <label for="rating-book1">Rating:</label>
-                            <select id="rating-book1" name="rating" required>
-                                <option value="5">5 Stars</option>
-                                <option value="4">4 Stars</option>
-                                <option value="3">3 Stars</option>
-                                <option value="2">2 Stars</option>
-                                <option value="1">1 Star</option>
-                            </select>
+                        <form action="#">
+                            <div class="rating-container">
+                                <div class="rating">
+                                <input type="number" name="rating" hidden>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
+                                <i class='bx bx-star'></i>
 
-                            <label for="review-book1">Your Review:</label>
-                            <textarea id="review-book1" name="review" rows="5" placeholder="Write your review here..."
-                                required></textarea>
+                              </div>
+                              </div>
+                              <textarea name="comment" cols="30" rows="5" placeholder="Share your thoughts on this book..."></textarea>
 
-                            <button type="submit" class="btn primary-btn">Submit Review</button>
+                              <div>
+                                <button type="submit" class="btn submit">Submit</button>
+                                <button class="btn cancel">Cancel</button>
+                              </div>
+                            
+                        
                         </form>
+                    </div>  
                     </div>
-
-                </div>
-
+                    </div>
                 <!-- Book Item 2 -->
                 <div class="book-item">
-                    <img src="Book Covers/1984.jpg" alt="Book 2">
+                    <img src="Book Covers/1984.jpg">
+                    <div class="content-wrapper">
+                    <div class="book-details">
                     <h2>1984</h2>
                     <p>by George Orwell</p>
-                    <p>Rating: 4.8/5 (200 Reviews)</p>
+                    <p class="rating">Rating: <span>4.8/5</span> (200 Reviews)</p>
                     <a href="book2-details.html" class="review-btn">Read Reviews</a>
+                    </div>
 
                     <!-- Review Submission Form for Book 2 -->
                     <div class="review-form">
                         <h3>Submit Your Review</h3>
-                        <form action="#" method="POST">
-                            <label for="rating-book2">Rating:</label>
-                            <select id="rating-book2" name="rating" required>
-                                <option value="5">5 Stars</option>
-                                <option value="4">4 Stars</option>
-                                <option value="3">3 Stars</option>
-                                <option value="2">2 Stars</option>
-                                <option value="1">1 Star</option>
-                            </select>
+                        <form action="#">
+                            <div class="rating-container">
+                                <div class="rating">
+                                <input type="number" name="rating" hidden>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                </div>
+                              </div>
 
-                            <label for="review-book2">Your Review:</label>
-                            <textarea id="review-book2" name="review" rows="5" placeholder="Write your review here..."
-                                required></textarea>
+                              <textarea name="comment" cols="30" rows="5" placeholder="Share your thoughts on this book..."></textarea>
 
-                            <button type="submit" class="btn primary-btn">Submit Review</button>
+                              <div>
+                                <button type="submit" class="btn submit">Submit</button>
+                                <button class="btn cancel">Cancel</button>
+                              </div>
+
+
+                        
                         </form>
                     </div>
-                </div>
 
-                <!-- Additional book items can go here -->
-            </div>
+                    </div>
+           </div>
+           <!-- Additional book items can go here -->
         </div>
     </section>
 
 
-
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 BookVibe. All rights reserved.</p>
+        <section class="footer-legal">
+            <p>&copy; 2024 BookVibe. All rights reserved.</p>
+        </section>
     </footer>
 
     <script src="script.js">

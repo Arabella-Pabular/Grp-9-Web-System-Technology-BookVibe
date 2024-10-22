@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const menuIcon = document.getElementById('menu-icon');  // Get the menu icon element
 const navList = document.querySelector('.navlist');    // Get the nav list
 
-menuIcon.addEventListener('click', () => {
+menuIcon.addEventListener('click', function() {
   navList.classList.toggle('show');  // Toggle the 'show' class on click
 });
 
