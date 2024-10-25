@@ -1360,33 +1360,84 @@ section h4 {
 
 /* Book Info Section */
 .book-info {
-    color: #333;
+  color: #333;
+  margin-top: 20px;
+  text-align: left;
 }
 
+/* Book Title Styling */
 .book-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
+/* Genre Styling */
 .book-info .genre {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
 }
 
+/* Button Styling */
 .btn {
-    background-color: #520d73;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+  background-color: #520d73;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
 }
 
 .btn:hover {
-    background-color: #3f0858;
+  background-color: #3f0858;
 }
 
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Book Details Layout */
+.book-details {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Book Cover Styling */
+.book-cover img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .book-details {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .book-info {
+      text-align: center;
+  }
+}
+
+/* Button Styling for Small Screens */
+@media (max-width: 480px) {
+  .btn {
+      width: 100%;
+      text-align: center;
+  }
+}
 
 
 /* About Section */
