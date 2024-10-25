@@ -93,6 +93,14 @@ h2 {
   padding: 5px 10px;
 }
 
+/* Active link for the current page */
+.navlist .nav-link.active {
+  background: #512e63;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #c889e6;
+}
+
 #menu-icon {
   display: none;
   /* Hide by default, shown only on smaller screens */
@@ -769,7 +777,7 @@ body {
 }
 
 .footer-main-item form button {
-  background-color: #6ab5f1;
+  background-color: #825aa7;
   padding: 0.75rem 1.5rem;
   border: none;
   color: #fff;
@@ -1224,9 +1232,6 @@ gap: 4rem;
   background-color: #3498db;
 }
 
-
-
-
 /* ============  Recommendations Section ==============*/
 .recommendations {
     padding: 3rem 2rem;
@@ -1266,12 +1271,10 @@ gap: 4rem;
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
-   
 }
 
 .recommendation-list .book{
 box-shadow: 0 12px 24px rgba(7, 7, 7, 0.705); 
-
 }
 
 /* Section Headers */
@@ -1330,7 +1333,6 @@ section h4 {
 }
 
 /* Book Card Styles */
-
 .book {
     background: white;
     border: 1px solid #ddd;
@@ -1439,69 +1441,182 @@ section h4 {
   }
 }
 
-
-/* About Section */
-.about, .mission, .Started, .Together, .team {
-    padding: 50px 0;
-    text-align: center;
-
+/* ============ About Section ==============*/
+.about-header {
+  position: relative;
+  background: url('Images/library.jpg') no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  padding: 20px 9%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* Optional: Adding a dark overlay for better contrast */
+.about-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay */
+  z-index: 1;
+}
 
+.about-header .nav, .about-header .logo {
+  z-index: 2; /* Ensure nav and logo are above the overlay */
+}
+
+.about-header .header-content {
+  position: absolute;
+  bottom: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.header-content h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* About Section */
+.about {
+  padding: 20px 0;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 1200px; /* Cap the max width for larger screens */
+  margin: auto;
+  overflow: hidden;
+  padding: 20px 0;
+}
 
 .about h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  margin-top: 60px;
-  color: white; 
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
 }
 
 .about p {
+  font-size: 1.2rem;
   color: white;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
 }
 
-.mission h2, .Started h2, .Together h2, .team h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+/* ============ Responsive Header for About Page ==============*/
+@media screen and (max-width: 768px) {
+  .about-header {
+    height: 300px; /* Adjust for smaller screens */
+  }
+
+  .about-header .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .about-header {
+    padding: 10px 5%;
+  }
+
+  .about-header .header-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 1rem;
+  }
+}
+
+/* Mission, Started, and Together Section */
+.mission, .Started, .Together {
+  padding: 20px 0;
+}
+
+.mission h2, .Started h2, .Together h2 {
+  font-size: 1.5rem;
+  max-width: 800px;
+  text-align: left;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  margin: 20px auto;
 }
 
 .mission p, .Started p, .Together p {
+  font-size: 1.1rem;
+  text-align: left;
+  max-width: 800px;
+  margin: 20px auto;
+  line-height: 1.8;
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .mission h2, .Started h2, .Together h2 {
+    font-size: 1.5rem;
+  }
 
-
+  .mission p, .Started p, .Together p {
+    font-size: 1rem;
+  }
+}
 
 /* Team Section */
+.team {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
 .team-member {
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+  text-align: center;
+  margin: 20px;
+  display: inline-block;
+  width: 29.3%;
+  vertical-align: top;
 }
 
 .team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
 }
 
 .team-member h3 {
-    font-size: 22px;
-    color: white;
-    margin-bottom: 5px;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .team-member p {
-    color: #949090;
-    font-size: 16px;
+  font-size: 1rem;
+  color: #949090;
 }
 
-  .about, .mission p{
-    color: white;
-  }
-
-/* Login Overlay */
+/* ============ Login Overlay ==============*/
 /* The Modal (background) */
 .login {
   display: flex;
