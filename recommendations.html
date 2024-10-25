@@ -1,88 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" initial-scale=1.0>
-    <title>Book Review Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - BookVibe</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!--================ CSS ======================-->  
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <!--================ FAVICON ======================-->  
      <link rel="shortcut icon" href="Images/logo.png" type="image/png">
-
+      
     <!--================ REMIXICONS ======================-->  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="9afza5vpuemopj82ffu65gt9sh9v8h9s" crossorigin="anonymous" referrerpolicy="no=referer" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="9afza5vpuemopj82ffu65gt9sh9v8h9s">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!--================ SWIPER CSS ======================-->  
+
+
+     <!--================ SWIPER CSS ======================-->  
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js">
+    </script>
     
 </head>
 
 <body>
+
     <!-- Header Section -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="logo">
-                <img src="Images/logo.png" alt="BookVibe Logo" style="width: 40px; height: 60px; vertical-align: middle;"> BookVibe
-            </a>
-        </nav>
+       <nav class = "nav container">
+        <a href="#" class="logo">
+
+            <img src="Images/logo.png" alt="BookVibe Logo" style="width: 40px; height: 60px; vertical-align: middle;"> BookVibe</a>
+
+      <div class = "navmenu">
+        <ul class="navlist">
+            <li class= "nav-item">
+                <a href="index.html" class="nav-link">
+                    <i class="ri-home-3-line"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="book-reviews.html" class="nav-link">
+                    <i class="ri-shield-star-line"></i>
+                    <span>Book Reviews</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="recommendations.html" class="nav-link">
+                    <i class="ri-book-3-line"></i>
+                    <span>Recommendations</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="about.html" class="nav-link">
+                    <i class="ri-team-line"></i>
+                    <span>About</span>
+                </a>
+            </li>
+
+            <li class= "nav-item">
+                <a href="#" id="login-button">
+                    <i class="ri-login-box-line"></i>
+                    <span>Login</span>
+                </a>
+            </li>   
+        </ul>
+      </div>
+
+
+      <div class="bx bx-menu" id="menu-icon"> &#9776;</div>
+
+    </nav>
+
     </header>
 
-    <!-- Filters Section -->
-    <section class="filters">
-        <div>
-            <label for="rating-filter">Filter by Rating:</label>
-            <select id="rating-filter">
-                <option value="all">All Ratings</option>
-                <option value="5">5.0 Stars</option>
-                <option value="4">4.0 Stars & Up</option>
-                <option value="3">3.0 Stars & Up</option>
-                <option value="2">2.0 Stars & Up</option>
-                <option value="1">1.0 Stars & Up</option>
-            </select>
-        </div>
-        <div>
-            <label for="reviews-filter">Filter by Reviews:</label>
-            <select id="reviews-filter">
-                <option value="all">All Reviews</option>
-                <option value="100">100+ Reviews</option>
-                <option value="500">500+ Reviews</option>
-                <option value="1000">1000+ Reviews</option>
-            </select>
-        </div>
-    </section>
-
-    <!-- Recommendations Section -->
-    <section class="recommendations">
+    <!-- Book Recommendations Section -->
+    <section class="book-reviews">
         <div class="container">
-            <h1>Book Recommendations</h1>
-            <h4>Discover books tailored to your reading preferences. Explore our top picks!</h4>
+            
+            <!-- Header Section -->
+            <div class="reviews-header">
+                <h1>Book Recommendations</h1>
+                <p>Discover books tailored to your reading preferences. Explore our top picks!</p>
+                
+            </div>
+            
+            <!-- Sorting Options -->
+            <div class="sorting-options">
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="all">All</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="science-fiction">Science Fiction</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="biography">Biography</option>
+                    <option value="action&adventure">Action & Adventure</option>
+                    <option value="history">History</option>
+                </select>
+
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+
+                <label for="date">Sort by:</label>
+                <select id="date">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+        </section>  
             
             <!-- Book List -->
             <div class="recommendation-list">
-                <div class="book">
-                    <a href="Book Details/1984.html">
-                        <img src="Book Covers/1984-George Orwell.jpg" alt="1984">
-                        <div class="book-info">
-                            <h3>1984</h3>
-                            <h5>By George Orwell</h5>
-                            <p class="genre">Genre: Dystopian Fiction</p>
-                        </div>
-                    </a>
-                </div>
+                <div class="book" data-genre="fiction" data-rating="5" data-date="2024-10-26" onclick="openModal('Book Covers/1984-George Orwell.jpg', '1984', 'George Orwell', 'Dystopian Fiction', 'A dystopian novel set in a totalitarian society ruled by Big Brother. The book explores themes of surveillance, control, and the nature of truth.')">
+                    <img src="Book Covers/1984-George Orwell.jpg" alt="1984">
+                    <div class="book-info">
+                        <h3>1984</h3>
+                        <h5>By George Orwell</h5>
+                        <p class="genre">Genre: Fiction</p>
+                    </div>
+                </div> 
 
-            <!-- Create more pages for book details starting from below -->    
-
-                <div class="book">
+                <div class="book" data-genre="Design" data-rating="2" data-date="2024-09-22" onclick="openModal('Book Covers/Book Design-Nancy Starkman.png', 'Book Design', 'Nancy Starkman', 'Design', 'A guide for authors and designers on creating visually appealing book layouts, covering principles of typography, color, and spacing.')">
                     <img src="Book Covers/Book Design-Nancy Starkman.png" alt="Book Design">
                     <div class="book-info">
                         <h3>Book Design</h3>
                         <h5>By Nancy Starkman</h5>
                         <p class="genre">Genre: Design</p>
                         </div>
-                    </a>
                 </div>
 
                 <div class="book">
@@ -92,7 +156,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -102,7 +165,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -112,7 +174,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -122,7 +183,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -132,7 +192,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -142,7 +201,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -152,7 +210,6 @@
                         <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -162,7 +219,6 @@
                         <h5>By Pittacus Lore</h5>
                         <p class="genre">Genre: Science Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -172,7 +228,6 @@
                         <h5>By Hector Garcia</h5>
                         <p class="genre">Genre: Self-help</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -182,7 +237,6 @@
                         <h5>By Sarah Harvey</h5>
                         <p class="genre">Genre: Self-help</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -192,7 +246,6 @@
                         <h5>By Marcus Aurelius</h5>
                         <p class="genre">Genre: Philosophy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -202,7 +255,6 @@
                         <h5>By Olivia Wilson</h5>
                         <p class="genre">Genre: Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -212,7 +264,6 @@
                         <h5>By Claudia Wilson</h5>
                         <p class="genre">Genre: Romance</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -222,7 +273,6 @@
                         <h5>By Sun Tzu</h5>
                         <p class="genre">Genre: Strategy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -232,7 +282,6 @@
                         <h5>By Fyodor Dostoevsky</h5>
                         <p class="genre">Genre: Classic Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -242,7 +291,6 @@
                         <h5>By Alexandre Dumas</h5>
                         <p class="genre">Genre: Classic Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -252,7 +300,6 @@
                         <h5>By Alexandra Bracken</h5>
                         <p class="genre">Genre: Dystopian Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -262,7 +309,6 @@
                         <h5>By F. Scott Fitzgerald</h5>
                         <p class="genre">Genre: Classic Fiction</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -272,7 +318,6 @@
                         <h5>By Takehiro Kanegi</h5>
                         <p class="genre">Genre: Romance</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -282,7 +327,6 @@
                         <h5>By Aaron Loeb</h5>
                         <p class="genre">Genre: Fantasy</p>
                     </div>
-                </a>
             </div>
 
                 <div class="book">
@@ -292,7 +336,6 @@
                         <h5>By Leo Tolstoy</h5>
                         <p class="genre">Genre: Historical Fiction</p>
                     </div>
-                </a>
             </div>
 
 
@@ -302,10 +345,202 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 BookVibe. All rights reserved.</p>
-    </footer>
-</body>
+    <!-- Modal HTML Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Book Image">
+            <h3 id="modal-title"></h3>
+            <h5 id="modal-author"></h5>
+            <p id="modal-genre"></p>
+            <p id="modal-description"></p> <!-- This is where the description will display -->
+        </div>
+    </div>
 
+    <!-- JavaScript -->
+    <script>
+        // Function to open the modal
+        function openModal(image, title, author, genre, description) {
+            document.getElementById('modal-image').src = image;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-author').innerText = "By " + author;
+            document.getElementById('modal-genre').innerText = "Genre: " + genre;
+            document.getElementById('modal-description').innerText = description; // Set description
+            document.getElementById('modal').style.display = 'block';
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    
+        // Filtering Functionality
+        document.getElementById("genre").addEventListener("change", filterBooks);
+        document.getElementById("rating").addEventListener("change", filterBooks);
+        document.getElementById("date").addEventListener("change", sortBooks);
+
+        function filterBooks() {
+            const selectedGenre = document.getElementById("genre").value;
+            const selectedRating = document.getElementById("rating").value;
+            const books = document.querySelectorAll(".book");
+
+        books.forEach(book => {
+            const genreMatch = selectedGenre === "all" || book.dataset.genre === selectedGenre;
+            const ratingMatch = selectedRating === "all" || book.dataset.rating === selectedRating;
+            book.style.display = genreMatch && ratingMatch ? "block" : "none";
+            });
+        }
+
+        function sortBooks() {
+    const selectedSort = document.getElementById("date").value;
+    const books = Array.from(document.querySelectorAll(".book"));
+    const bookContainer = document.querySelector(".recommendation-list");
+
+    books.sort((a, b) => {
+        const dateA = new Date(a.getAttribute("data-date"));
+        const dateB = new Date(b.getAttribute("data-date"));
+
+        if (selectedSort === "newest") {
+            return dateB - dateA; // Sort descending for newest
+        } else if (selectedSort === "oldest") {
+            return dateA - dateB; // Sort ascending for oldest
+        }
+    });
+
+    books.forEach(book => bookContainer.appendChild(book));
+}
+
+        // Initial filter and sort on page load
+        filterBooks();
+        sortBooks();
+
+    </script>
+
+    
+    <!-- Style for Modal -->
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 10% auto;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+            background-color: #c3a5d1;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #333333; 
+        }
+
+        .modal-content h2 {
+            font-family: 'Georgia', serif;
+            color: #ff6347;
+
+        }
+
+        .modal-content p {
+          color: #555555;
+         font-size: 16px;
+        }
+
+        .modal-content img {
+        max-width: 100%; /* Adjust to fit within the modal width */
+        max-height: 400px; /* Limit height to avoid excessive vertical size */
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+
+</body>
 </html>
+
+<footer>
+        <!-- Footer main -->
+        <section class="footer-main">
+            <div class="footer-main-item priority">
+                <h3>BookVibe</h3>
+                <p>BookVibe is an interactive platform for book enthusiasts to review, rate, and discuss their favorite reads. We provide personalized recommendations based on your reading preferences.</p>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">About</h2>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">Company</h2>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">Stay Connected</h2>
+                <form>
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+      
+        <!-- Footer social -->
+        <section class="footer-social">
+            <div class="footer-social-list">
+                <a href="https://www.facebook.com/" class="footer-social-link">
+                    <i class="ri-facebook-circle-line"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" class="footer-social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="https://x.com/" class="footer-social-link">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+            </div>
+        </section>
+      
+        <!-- Footer legal -->
+        <section class="footer-legal">
+            <p>&copy; 2024 BookVibe. All rights reserved.</p>
+        </section>
+    </footer>

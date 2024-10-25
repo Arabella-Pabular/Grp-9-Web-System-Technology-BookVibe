@@ -361,6 +361,11 @@ section {
   transform: scale(1.05);
 }
 
+.book {
+  cursor: pointer;
+  /* Add any other styles for your book container here */
+}
+
 /* Swiper class */
 .swiper-slide-active,
 .swiper-slide-duplicate-active {
