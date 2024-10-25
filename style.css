@@ -3,7 +3,6 @@
 
 
  /*================ BASE ======================*/ 
-
 * {
   padding: 0;
   margin: 0;
@@ -11,7 +10,6 @@
   list-style: none;
   text-decoration: none;
 }
-
 
 body {
   font-family: Arial, sans-serif;
@@ -29,10 +27,7 @@ h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-
-
 /*================== HEADER & NAV =======================*/
-
 .header {
   position: fixed;
   background: rgba(0, 0, 0, 0.6);
@@ -98,18 +93,14 @@ h2 {
   padding: 5px 10px;
 }
 
-
-
 #menu-icon {
   display: none;
   /* Hide by default, shown only on smaller screens */
   font-size: 35px;
   color: white;
   cursor: pointer;
-  z-index: 10001;
-  
+  z-index: 10001;  
 }
-
 
 /* Responsive Design for smaller screens */
 @media screen and (max-width: 768px) {
@@ -187,7 +178,6 @@ h2 {
   z-index: 1;
 }
 
-
 .hero-content {
   align-content: center;
   position: relative;
@@ -235,7 +225,6 @@ section {
   font-weight: 600;
   margin-bottom: 1.5rem;
   animation: slideIn 2s ease-out;
-
 }
 
 .hero-section h1 .highlight {
@@ -254,8 +243,6 @@ section {
   /* Increase vertical spacing */
   opacity: 0.9;
 }
-
-
 
 /* ======== For featured-books-section ======== */
 .featured-books-section h3 {
@@ -314,13 +301,11 @@ section {
   box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
 }
 
-
 .book-description {
   display:flex;
   flex-direction: column;
   align-items:center;
 }
-
 
 /* Featured Books Section */
 .featured-books-section {
@@ -368,11 +353,6 @@ section {
   transform: scale(1.05);
 }
 
-
-
-
-
-
 /* Swiper class */
 .swiper-slide-active,
 .swiper-slide-duplicate-active {
@@ -413,74 +393,70 @@ section {
       text-align: center; /* Center paragraph on mobile */
   }
 
-    /* Adjust review-container for smaller screens */
-    .review-container {
-      display: flex;
-      flex-direction: column; /* Stack reviews vertically on smaller screens */
-      align-items: center; /* Center review cards */
-    }
+  /* Adjust review-container for smaller screens */
+  .review-container {
+    display: flex;
+    flex-direction: column; /* Stack reviews vertically on smaller screens */
+    align-items: center; /* Center review cards */
+  }
   
-    /* Adjust review-card for mobile */
-    .review-card {
-      width: 100%; /* Full width within its container */
-      max-width: 350px; /* Restrict max width on mobile */
-      margin-bottom: 1.5rem; /* Space between cards */
-      padding: 1rem 0; /* Adjust padding */
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column; /* Stack content vertically */
-    }
+  /* Adjust review-card for mobile */
+  .review-card {
+    width: 100%; /* Full width within its container */
+    max-width: 350px; /* Restrict max width on mobile */
+    margin-bottom: 1.5rem; /* Space between cards */
+    padding: 1rem 0; /* Adjust padding */
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  }
+  
   /* Adjust review-card image */
-.review-card img {
-  height: 180px; /* Set a fixed height */
-  object-fit: cover; /* Prevent image from stretching */
-  border-radius: 5px;
-}
+  .review-card img {
+    height: 180px; /* Set a fixed height */
+    object-fit: cover; /* Prevent image from stretching */
+    border-radius: 5px;
+  }
 
-/* Limit the text height and overflow */
-.review-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  /* Limit the text height and overflow */
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-.review-content p {
-  overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  max-height: 4.5rem; /* Control the height of content */
-}
+  .review-content p {
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for long text */
+    max-height: 4.5rem; /* Control the height of content */
+  }
 
-/* Limit description and prevent overflowing */
-.review-content .description {
-  overflow: hidden;
-  white-space: nowrap; /* Prevent wrapping */
-  text-overflow: ellipsis;
-  margin-bottom: 1rem;
-}
-  
-
+  /* Limit description and prevent overflowing */
+  .review-content .description {
+    overflow: hidden;
+    white-space: nowrap; /* Prevent wrapping */
+    text-overflow: ellipsis;
+    margin-bottom: 1rem;
+  }  
 }
 
 .book-carousel::-webkit-scrollbar {
   display: none; /* Hide scrollbar for webkit browsers */
 }
 
+/* For latest-reviews-section */
+.latest-reviews-section h3 {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
 
-  
-  /* For latest-reviews-section */
-  .latest-reviews-section h3 {
-      font-family: 'Roboto', sans-serif;
-      color: black;
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 2rem;
-  }
-
-
-  .latest-reviews-section h2 {
+.latest-reviews-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 50px;
   font-style: italic;
@@ -488,17 +464,16 @@ section {
   margin-bottom: 3rem;
   color: white;
   text-align: left;
-  }
+}
 
-  .latest-reviews-section p {
-      font-family: 'Roboto', sans-serif;
-      color: black;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-  }
+.latest-reviews-section p {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
 
-  
 .btn {
   font-family: 'Poppins', Arial, sans-serif;
   display: inline-block;
@@ -512,7 +487,6 @@ section {
   background-color: #90c2f8;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .primary-btn {
   background: #825aa7;
@@ -570,10 +544,6 @@ section {
     /* Move back to original position */
   }
 }
-
-
-
-  
 
 /* ==========  Latest Reviews Section =========*/
 .latest-reviews-section {
@@ -636,7 +606,6 @@ section {
   margin-bottom: 0.5rem; 
 }
 
-
 .review-content p:nth-of-type(3) {
   margin-top: 1rem; 
   margin-bottom: 0.5rem; 
@@ -663,7 +632,6 @@ font-size: 25px;
   transform: scale(1.02);
   cursor: pointer;
 }
-
 
 /* Recommendations Section */
 .recommendations-section {
@@ -706,10 +674,7 @@ font-size: 25px;
   margin: auto;
 }
 
-
 /* Footer Section */
-
-
 * {
   font-family: “Poppins”, sans-serif;
   box-sizing: border-box;
@@ -725,18 +690,20 @@ ul {
 footer {
   background-color: #412c4e;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0;
   color: #fff;
   margin-top: 30px;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 footer a {
   text-decoration: none;
   color: #eee;
+  transition: color 0.3s ease-in-out;
 }
 
 a:hover {
+  color: #f3b6ea; 
   text-decoration: underline;
 }
 
@@ -747,18 +714,19 @@ body {
   flex-direction: column;
 }
 
-
 /* Footer main */
 .footer-main {
-  padding: 1.25rem 1.875rem;
+  padding: 1.875rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .footer-title {
   color: #fff;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-main-item h3,
@@ -772,6 +740,7 @@ body {
   flex-basis: 20%;
   padding: 1.25rem;
   min-width: 12.5rem; 
+  text-align: left;
 }
 
 .footer-main-item.priority {
@@ -791,6 +760,28 @@ body {
   margin: 0;
 }
 
+.footer-main-item form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-main-item form button {
+  background-color: #6ab5f1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-main-item form button:hover {
+  background-color: #f3b6ea;
+}
+
 /* Footer social */
 .footer-social {
   padding: 0 1.875rem 1.25rem;
@@ -799,7 +790,7 @@ body {
 .footer-social-list {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   padding-top: 1.25rem;
 }
 
@@ -814,7 +805,7 @@ body {
 .footer-social-link {
   color: #fff;
   font-size: 1.5rem;
-  transition: color 0.3s,  text-shadow 0.3s;
+  transition: color 0.3 ease, text-shadow 0.3s;
 }
 
 .footer-social-link:hover {
@@ -828,14 +819,14 @@ body {
   text-align: center;
 }
 
-
 /* Footer legal */
 .footer-legal {
-  padding: 0.9375rem 1.875rem;
+  padding: 1.25rem;
   background-color: #333;
+  color: #aaa;
+  font-size: 0.875rem;
 
 }
-
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -844,11 +835,17 @@ body {
     align-items: flex-start;
   }
 
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
   .footer-about, .footer-links {
     margin-bottom: 20px;
   }
 
-  .legal-footer {
+  .footer-legal {
     text-align: center;
   }
 }
