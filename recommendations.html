@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" initial-scale=1.0>
     <title>Book Recommendations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations - BookVibe</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <!--================ CSS ======================-->  
     <link href="style.css" rel="stylesheet" type="text/css">
 
     <!--================ FAVICON ======================-->  
      <link rel="shortcut icon" href="Images/logo.png" type="image/png">
-
-
+      
     <!--================ REMIXICONS ======================-->  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" integrity="9afza5vpuemopj82ffu65gt9sh9v8h9s">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
 
     
 </head>
 
-
 <body>
-    
+
     <!-- Header Section -->
     <header class="header" id="header">
        <nav class = "nav container">
         <a href="#" class="logo">
-              <img src="Images/logo.png" alt="BookVibe Logo" style="width: 40px; height: 60px; vertical-align: middle;"> BookVibe</a>
 
-
-      <div class="bx bx-menu" id="menu-icon"> &#9776;</div>
+            <img src="Images/logo.png" alt="BookVibe Logo" style="width: 40px; height: 60px; vertical-align: middle;"> BookVibe</a>
 
       <div class = "navmenu">
         <ul class="navlist">
@@ -64,161 +68,471 @@
       </div>
 
 
-     
-           
+      <div class="bx bx-menu" id="menu-icon"> &#9776;</div>
+
     </nav>
 
     </header>
 
-    <!-- Recommendations Section -->
-    <section class="recommendations">
+    <!-- Book Recommendations Section -->
+    <section class="book-reviews">
         <div class="container">
-            <h1>Book Recommendations</h1>
-            <h4>Discover books tailored to your reading preferences. Explore our top picks!</h4>
+            
+            <!-- Header Section -->
+            <div class="reviews-header">
+                <h1>Book Recommendations</h1>
+                <p>Discover books tailored to your reading preferences. Explore our top picks!</p>
+                
+            </div>
+            
+            <!-- Sorting Options -->
+            <div class="sorting-options">
+                <label for="genre">Genre:</label>
+                <select id="genre">
+                    <option value="all">All</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="science-fiction">Science Fiction</option>
+                    <option value="romance">Romance</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="horror">Horror</option>
+                    <option value="biography">Biography</option>
+                    <option value="action&adventure">Action & Adventure</option>
+                    <option value="history">History</option>
+                </select>
 
-            <!-- Recommended Books Section -->
+                <label for="rating">Rating:</label>
+                <select id="rating">
+                    <option value="all">All Ratings</option>
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                </select>
+
+                <label for="date">Sort by:</label>
+                <select id="date">
+                    <option value="newest">Newest</option>
+                    <option value="oldest">Oldest</option>
+                </select>
+            </div>
+        </section>  
+            
+            <!-- Book List -->
             <div class="recommendation-list">
-                <div class="book">
-                    <img src="Book Covers/BookCover1.jpg" alt="Book 1">
+                <div class="book" data-genre="fiction" data-rating="5" data-date="2024-10-26" onclick="openModal('Book Covers/1984-George Orwell.jpg', '1984', 'George Orwell', 'Dystopian Fiction', 'A dystopian novel set in a totalitarian society ruled by Big Brother. The book explores themes of surveillance, control, and the nature of truth.')">
+                    <img src="Book Covers/1984-George Orwell.jpg" alt="1984">
                     <div class="book-info">
-                        <h3>Book Title 1</h3>
-                        <h5>By Author Name</h5>
+                        <h3>1984</h3>
+                        <h5>By George Orwell</h5>
                         <p class="genre">Genre: Fiction</p>
-                        <a href="#" class="btn">Read More</a>
                     </div>
+                </div> 
+
+                <div class="book" data-genre="Design" data-rating="2" data-date="2024-09-22" onclick="openModal('Book Covers/Book Design-Nancy Starkman.png', 'Book Design', 'Nancy Starkman', 'Design', 'A guide for authors and designers on creating visually appealing book layouts, covering principles of typography, color, and spacing.')">
+                    <img src="Book Covers/Book Design-Nancy Starkman.png" alt="Book Design">
+                    <div class="book-info">
+                        <h3>Book Design</h3>
+                        <h5>By Nancy Starkman</h5>
+                        <p class="genre">Genre: Design</p>
+                        </div>
                 </div>
 
                 <div class="book">
-                    <img src="Book Covers/BookCover2.jpg" alt="Book 2">
+                    <img src="Book Covers/HP Chamber of Secrets-JK Rowling.png" alt="HP Chamber of Secrets">
                     <div class="book-info">
-                        <h3>Book Title 2</h3>
-                        <h5>By Author Name</h5>
+                        <h3>Harry Potter and the Chamber of Secrets</h3>
+                        <h5>By J.K. Rowling</h5>
                         <p class="genre">Genre: Fantasy</p>
-                        <a href="#" class="btn">Read More</a>
                     </div>
-                </div>
+            </div>
 
                 <div class="book">
-                    <img src="Book Covers/BookCover3.jpg" alt="Book 3">
+                    <img src="Book Covers/HP Deathly Hallows-JK Rowling.png" alt="HP Deathly Hallows">
                     <div class="book-info">
-                        <h3>Book Title 3</h3>
-                        <h5>By Author Name</h5>
-                        <p class="genre">Genre: Mystery</p>
-                        <a href="#" class="btn">Read More</a>
+                        <h3>Harry Potter and the Deathly Hallows</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
                     </div>
-                </div>
+            </div>
 
-                <!-- Add more books here -->
+                <div class="book">
+                    <img src="Book Covers/HP Goblet of Fire-JK Rowling.png" alt="HP Goblet of Fire">
+                    <div class="book-info">
+                        <h3>Harry Potter and the Goblet of Fire</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/HP Half-Blood Prince-JK Rowling.png" alt="HP Half-Blood Prince">
+                    <div class="book-info">
+                        <h3>Harry Potter and the Half-Blood Prince</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/HP Order of the Phoenix-JK Rowling.png" alt="HP Order of the Phoenix">
+                    <div class="book-info">
+                        <h3>Harry Potter and the Order of the Phoenix</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/HP Philosopher's Stone-JK Rowling.png" alt="HP Philosopher's Stone">
+                    <div class="book-info">
+                        <h3>Harry Potter and the Philosopher's Stone</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/HP Prisoner of Azkaban-JK Rowling.png" alt="HP Prisoner of Azkaban">
+                    <div class="book-info">
+                        <h3>Harry Potter and the Prisoner of Azkaban</h3>
+                        <h5>By J.K. Rowling</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/I Am Number Four-Pittacus Lore.jpg" alt="I Am Number Four">
+                    <div class="book-info">
+                        <h3>I Am Number Four</h3>
+                        <h5>By Pittacus Lore</h5>
+                        <p class="genre">Genre: Science Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/Ikigai-Hector Garcia.jpg" alt="Ikigai">
+                    <div class="book-info">
+                        <h3>Ikigai</h3>
+                        <h5>By Hector Garcia</h5>
+                        <p class="genre">Genre: Self-help</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/Kaizen-Sarah Harvey.jpg" alt="Kaizen">
+                    <div class="book-info">
+                        <h3>Kaizen</h3>
+                        <h5>By Sarah Harvey</h5>
+                        <p class="genre">Genre: Self-help</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/Meditations-Marcus Aurelius.jpg" alt="Meditations">
+                    <div class="book-info">
+                        <h3>Meditations</h3>
+                        <h5>By Marcus Aurelius</h5>
+                        <p class="genre">Genre: Philosophy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/Soul-Olivia Wilson.jpg" alt="Soul">
+                    <div class="book-info">
+                        <h3>Soul</h3>
+                        <h5>By Olivia Wilson</h5>
+                        <p class="genre">Genre: Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/Stay with Me-Claudia Wilson.jpg" alt="Stay with Me">
+                    <div class="book-info">
+                        <h3>Stay with Me</h3>
+                        <h5>By Claudia Wilson</h5>
+                        <p class="genre">Genre: Romance</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Art of War-Sun Tzu.jpg" alt="The Art of War">
+                    <div class="book-info">
+                        <h3>The Art of War</h3>
+                        <h5>By Sun Tzu</h5>
+                        <p class="genre">Genre: Strategy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Brothers Karamazov-Fyodor Dostoevsky.jpg" alt="The Brothers Karamazov">
+                    <div class="book-info">
+                        <h3>The Brothers Karamazov</h3>
+                        <h5>By Fyodor Dostoevsky</h5>
+                        <p class="genre">Genre: Classic Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Count of Monte Cristo-Alexandre Dumas.jpg" alt="The Count of Monte Cristo">
+                    <div class="book-info">
+                        <h3>The Count of Monte Cristo</h3>
+                        <h5>By Alexandre Dumas</h5>
+                        <p class="genre">Genre: Classic Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Darkest Minds-Alexandra Bracken.jpg" alt="The Darkest Minds">
+                    <div class="book-info">
+                        <h3>The Darkest Minds</h3>
+                        <h5>By Alexandra Bracken</h5>
+                        <p class="genre">Genre: Dystopian Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Great Gatsby-F. Scott Fitzgerald.jpg" alt="The Great Gatsby">
+                    <div class="book-info">
+                        <h3>The Great Gatsby</h3>
+                        <h5>By F. Scott Fitzgerald</h5>
+                        <p class="genre">Genre: Classic Fiction</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The True Love Story-Takehiro Kanegi.jpg" alt="The True Love Story">
+                    <div class="book-info">
+                        <h3>The True Love Story</h3>
+                        <h5>By Takehiro Kanegi</h5>
+                        <p class="genre">Genre: Romance</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/The Young Wizard-Aaron Loeb.jpg" alt="The Young Wizard">
+                    <div class="book-info">
+                        <h3>The Young Wizard</h3>
+                        <h5>By Aaron Loeb</h5>
+                        <p class="genre">Genre: Fantasy</p>
+                    </div>
+            </div>
+
+                <div class="book">
+                    <img src="Book Covers/War and Peace-Leo Tolstoy.jpg" alt="War and Peace">
+                    <div class="book-info">
+                        <h3>War and Peace</h3>
+                        <h5>By Leo Tolstoy</h5>
+                        <p class="genre">Genre: Historical Fiction</p>
+                    </div>
+            </div>
+
+
+                <!-- For more additional books, add from this line onwards -->
+                
             </div>
         </div>
     </section>
 
-    <!-- Personalized Recommendations -->
-            <section class="personalized">
-                <h2>Your Personalized Picks</h2>
-                <h4>Based on your past reviews, ratings, and preferences.</h4>
-                <div class="recommendation-list">
-                    <!-- Example Book Cards -->
-                    <div class="book">
-                        <img src="book1.jpg" alt="Book 1">
-                        <div class="book-info">
-                            <h3>Book Title 1</h3>
-                            <p class="genre">Genre: Fiction</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book2.jpg" alt="Book 2">
-                        <div class="book-info">
-                            <h3>Book Title 2</h3>
-                            <p class="genre">Genre: Mystery</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book3.jpg" alt="Book 3">
-                        <div class="book-info">
-                            <h3>Book Title 3</h3>
-                            <p class="genre">Genre: Fantasy</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- "You Might Also Like" Section -->
-            <section class="might-like">
-                <h2>You Might Also Like</h2>
-                <h4>Popular books in similar categories to the ones you’ve enjoyed.</h4>
-                <div class="recommendation-list">
-                    <!-- Example Book Cards -->
-                    <div class="book">
-                        <img src="book4.jpg" alt="Book 4">
-                        <div class="book-info">
-                            <h3>Book Title 4</h3>
-                            <p class="genre">Genre: Adventure</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book5.jpg" alt="Book 5">
-                        <div class="book-info">
-                            <h3>Book Title 5</h3>
-                            <p class="genre">Genre: Romance</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book6.jpg" alt="Book 6">
-                        <div class="book-info">
-                            <h3>Book Title 6</h3>
-                            <p class="genre">Genre: Thriller</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Community Picks -->
-            <section class="community-picks">
-                <h2>Community Picks</h2>
-                <h4>Best-rated books by other users in the community.</h4>
-                <div class="recommendation-list">
-                    <!-- Example Book Cards -->
-                    <div class="book">
-                        <img src="book7.jpg" alt="Book 7">
-                        <div class="book-info">
-                            <h3>Book Title 7</h3>
-                            <p class="genre">Genre: Non-Fiction</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book8.jpg" alt="Book 8">
-                        <div class="book-info">
-                            <h3>Book Title 8</h3>
-                            <p class="genre">Genre: Science Fiction</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                    <div class="book">
-                        <img src="book9.jpg" alt="Book 9">
-                        <div class="book-info">
-                            <h3>Book Title 9</h3>
-                            <p class="genre">Genre: Mystery</p>
-                            <a href="#" class="btn">View Details</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <!-- Modal HTML Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="Book Image">
+            <h3 id="modal-title"></h3>
+            <h5 id="modal-author"></h5>
+            <p id="modal-genre"></p>
+            <p id="modal-description"></p> <!-- This is where the description will display -->
         </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 BookVibe. All rights reserved.</p>
+    <!-- JavaScript -->
+    <script>
+        // Function to open the modal
+        function openModal(image, title, author, genre, description) {
+            document.getElementById('modal-image').src = image;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-author').innerText = "By " + author;
+            document.getElementById('modal-genre').innerText = "Genre: " + genre;
+            document.getElementById('modal-description').innerText = description; // Set description
+            document.getElementById('modal').style.display = 'block';
+        }
+    
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    
+        // Filtering Functionality
+        document.getElementById("genre").addEventListener("change", filterBooks);
+        document.getElementById("rating").addEventListener("change", filterBooks);
+        document.getElementById("date").addEventListener("change", sortBooks);
+
+        function filterBooks() {
+            const selectedGenre = document.getElementById("genre").value;
+            const selectedRating = document.getElementById("rating").value;
+            const books = document.querySelectorAll(".book");
+
+        books.forEach(book => {
+            const genreMatch = selectedGenre === "all" || book.dataset.genre === selectedGenre;
+            const ratingMatch = selectedRating === "all" || book.dataset.rating === selectedRating;
+            book.style.display = genreMatch && ratingMatch ? "block" : "none";
+            });
+        }
+
+        function sortBooks() {
+    const selectedSort = document.getElementById("date").value;
+    const books = Array.from(document.querySelectorAll(".book"));
+    const bookContainer = document.querySelector(".recommendation-list");
+
+    books.sort((a, b) => {
+        const dateA = new Date(a.getAttribute("data-date"));
+        const dateB = new Date(b.getAttribute("data-date"));
+
+        if (selectedSort === "newest") {
+            return dateB - dateA; // Sort descending for newest
+        } else if (selectedSort === "oldest") {
+            return dateA - dateB; // Sort ascending for oldest
+        }
+    });
+
+    books.forEach(book => bookContainer.appendChild(book));
+}
+
+        // Initial filter and sort on page load
+        filterBooks();
+        sortBooks();
+
+    </script>
+
+    
+    <!-- Style for Modal -->
+    <style>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-content {
+            position: relative;
+            margin: 10% auto;
+            padding: 20px;
+            width: 60%;
+            max-width: 600px;
+            background-color: #c3a5d1;
+            border-radius: 8px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: #333333; 
+        }
+
+        .modal-content h2 {
+            font-family: 'Georgia', serif;
+            color: #ff6347;
+
+        }
+
+        .modal-content p {
+          color: #555555;
+         font-size: 16px;
+        }
+
+        .modal-content img {
+        max-width: 100%; /* Adjust to fit within the modal width */
+        max-height: 400px; /* Limit height to avoid excessive vertical size */
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+
+</body>
+</html>
+
+<footer>
+        <!-- Footer main -->
+        <section class="footer-main">
+            <div class="footer-main-item priority">
+                <h3>BookVibe</h3>
+                <p>BookVibe is an interactive platform for book enthusiasts to review, rate, and discuss their favorite reads. We provide personalized recommendations based on your reading preferences.</p>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">About</h2>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">Company</h2>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Help Center</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-main-item">
+                <h2 class="footer-title">Stay Connected</h2>
+                <form>
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+      
+        <!-- Footer social -->
+        <section class="footer-social">
+            <div class="footer-social-list">
+                <a href="https://www.facebook.com/" class="footer-social-link">
+                    <i class="ri-facebook-circle-line"></i>
+                </a>
+
+                <a href="https://www.instagram.com/" class="footer-social-link">
+                    <i class="ri-instagram-line"></i>
+                </a>
+
+                <a href="https://x.com/" class="footer-social-link">
+                    <i class="ri-twitter-x-line"></i>
+                </a>
+            </div>
+        </section>
+      
+        <!-- Footer legal -->
+        <section class="footer-legal">
+            <p>&copy; 2024 BookVibe. All rights reserved.</p>
+        </section>
     </footer>
-
-    </body>
-
-    </html>
